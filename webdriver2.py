@@ -47,7 +47,8 @@ while (True):
                 title = h2['data-title']
                 bot.send_message(
                     chat_id=(config['TELEGRAM']['CHAR_ID']), 
-                    text="<>"title,
+                    #<a href="http://google.com">link</a>
+                    text="<a href='https://www.ozbargain.com.au/node/"+deal_id+"'>"+title+"</a>",
                     parse_mode=telegram.ParseMode.HTML
                 )
 
@@ -58,7 +59,7 @@ while (True):
 
         with open('data.txt', 'w') as outfile:
             json.dump(pre_data, outfile)
-            
+
     time.sleep(600)
 
     
