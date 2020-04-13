@@ -13,12 +13,12 @@ from telegram.ext import Dispatcher, MessageHandler, Filters
 # Load data from config.ini file
 config = configparser.ConfigParser()
 config.read('config.ini')
-options = FirefoxOptions()
-options.add_argument("--headless")
-driver = webdriver.Firefox(options=options)
 
 while (True):
     
+    options = FirefoxOptions()
+    options.add_argument("--headless")
+    driver = webdriver.Firefox(options=options)
     driver.get("https://www.ozbargain.com.au/cat/electrical-electronics/deals")
     htmltext = driver.page_source
     driver.close()
