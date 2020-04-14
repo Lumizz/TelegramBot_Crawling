@@ -48,7 +48,7 @@ while (True):
                 bot.send_message(
                     chat_id=(config['TELEGRAM']['CHAR_ID']), 
                     #<a href="http://google.com">link</a>
-                    text="<bold><a href='https://www.ozbargain.com.au/node/"+deal_id+"'>"+title+"</a></bold>",
+                    text="<b><a href='https://www.ozbargain.com.au/node/"+deal_id+"'>"+title+"</a></b>",
                     parse_mode=telegram.ParseMode.HTML
                 )
 
